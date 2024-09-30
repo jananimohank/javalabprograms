@@ -1,0 +1,52 @@
+import java.util.Scanner;
+import java.lang.Math;
+class Quadratic{
+int a,b,c;
+double r1,r2;
+void getf()
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter a value");
+a=sc.nextInt();
+while(a==0)
+{
+System.out.println("a cannot be zero, enter a value again:");
+a=sc.nextInt();
+}
+System.out.println("Enter b value");
+b=sc.nextInt();
+System.out.println("Enter c value");
+c=sc.nextInt();
+}
+void compute()
+{
+int d=b*b-4*a*c;
+if(d==0)
+{
+r1=(-b)/(2*a);
+System.out.println("Roots are real and equal");
+System.out.println("Root 1:"+r1+" and Root 2:"+r1);
+}
+else if(d>0)
+{
+r1=((-b)-(Math.sqrt(d)))/(double)(2*a);
+r2=((-b)+(Math.sqrt(d)))/(double)(2*a);
+System.out.print("Roots are real and distinct");
+
+System.out.print("Root 1:"+r1+" and Root 2:"+r2);
+} 
+else if(d<0)
+{
+System.out.print("Roots are imaginary");
+}
+}
+public static void main(String args[])
+{
+Quadratic s=new Quadratic();
+s.getf();
+s.compute();
+System.out.println("Name:JANANI");
+
+System.out.println("USN:121");
+}
+}
